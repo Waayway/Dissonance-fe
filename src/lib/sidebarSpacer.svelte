@@ -1,0 +1,1 @@
+<hr class="bg-gray-600 border border-gray-600 rounded-full mx-2"/>
