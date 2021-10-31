@@ -1,6 +1,7 @@
 <script lang="ts">
  import ArrowDown from 'svelte-icons/io/IoIosArrowDown.svelte'
  import CloseIcon from 'svelte-icons/io/IoMdClose.svelte'
+import Catagory from './textChannelSideBar/Catagory.svelte'
  let MenuOpen = false
  
  function toggleMenu() {
@@ -8,10 +9,9 @@
  }
 </script>
 
-<div class="fixed top-0 left-20 h-screen flex flex-col bg-primary-medium text-secondary shadow-lg w-auto">
-    <div class="flex hover:bg-primary-light transition-all" on:click={toggleMenu}>
+<div class="fixed top-0 left-20 h-screen flex flex-col bg-primary-medium text-secondary shadow-lg w-60">
+    <div class="flex hover:bg-primary-light transition-all justify-between cursor-pointer" on:click={toggleMenu}>
         <p class="p-4">Server name</p>
-        <div class="w-12"></div>
         <div class="h-14 p-4">
             {#if MenuOpen}
                 <CloseIcon />
@@ -21,10 +21,15 @@
         </div>
     </div>
     <hr class="border-primary-darker divider border">
-    <div class="fixed w-auto m-2 top-14 bg-primary-light menu transition-all duration-200 rounded-xl" class:MenuOpen>
+    <div class="fixed w-56 m-2 top-14 bg-primary-light menu transition-all duration-200 rounded-xl menuopen" class:MenuOpen>
         <p class="p-2">hello</p>
     </div>
-    <div class="">Menu list</div>
+    <div>
+        <ul>
+            <Catagory name="hello"/>
+            <li>list item</li>
+        </ul>
+    </div>
 </div>
 
 <style>
