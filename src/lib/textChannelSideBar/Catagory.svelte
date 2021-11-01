@@ -4,7 +4,7 @@
     import AddIcon from 'svelte-icons/io/IoIosAdd.svelte'
 </script>
 
-<div class="h-auto grid grid-cols-3 text-left justify-start align-middle cursor-pointer main">
+<div class="h-auto grid grid-cols-3 text-left justify-start align-middle cursor-pointer hover:text-secondary-light main">
     <div class="w-6 m-1 flex justify-center align-middle">
         <ArrowDown />
     </div>

@@ -2,6 +2,7 @@
  import ArrowDown from 'svelte-icons/io/IoIosArrowDown.svelte'
  import CloseIcon from 'svelte-icons/io/IoMdClose.svelte'
 import Catagory from './textChannelSideBar/Catagory.svelte'
+import TextChannel from './textChannelSideBar/TextChannel.svelte'
  let MenuOpen = false
  
  function toggleMenu() {
@@ -9,7 +10,7 @@ import Catagory from './textChannelSideBar/Catagory.svelte'
  }
 </script>
 
-<div class="fixed top-0 left-20 h-screen flex flex-col bg-primary-medium text-secondary shadow-lg w-60">
+<div class="fixed top-0 left-20 h-screen flex flex-col bg-primary-medium text-secondary-medium shadow-lg w-60">
     <div class="flex hover:bg-primary-light transition-all justify-between cursor-pointer" on:click={toggleMenu}>
         <p class="p-4">Server name</p>
         <div class="h-14 p-4">
@@ -27,7 +28,7 @@ import Catagory from './textChannelSideBar/Catagory.svelte'
     <div>
         <ul>
             <Catagory name="hello"/>
-            <li>list item</li>
+            <li><TextChannel name="List Item"/></li>
         </ul>
     </div>
 </div>

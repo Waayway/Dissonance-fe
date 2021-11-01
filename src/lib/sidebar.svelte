@@ -5,7 +5,7 @@
 </script>
 
 <nav>
-    <div class="fixed px-2 top-0 left-0 h-screen flex flex-col bg-primary-darker text-secondary shadow-lg">
+    <div class="fixed px-2 top-0 left-0 h-screen flex flex-col bg-primary-darker text-secondary-medium shadow-lg">
         <SidebarButton><FaFire slot="icon" /></SidebarButton>
         <SidebarSpacer />
     </div>

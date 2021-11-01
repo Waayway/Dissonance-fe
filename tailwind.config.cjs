@@ -12,7 +12,11 @@ module.exports = {
           "light": "#4d5564"
         },
 
-        secondary: "#12b67f",
+        secondary: {
+          "darker": "#0c7d56",
+          "medium": "#12b67f",
+          "light": "#14c889",
+        },
         text: "#fff",
         danger: '#e3342f',
         gray: {
