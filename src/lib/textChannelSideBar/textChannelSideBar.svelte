@@ -27,8 +27,9 @@ import TextChannel from './TextChannel.svelte'
     </div>
     <div>
         <ul>
-            <Catagory name="hello"/>
-            <li><TextChannel name="List Item"/></li>
+            <Catagory name="hello">
+                <TextChannel name="List Item"/>
+            </Catagory>
         </ul>
     </div>
 </div>
