@@ -1,6 +1,6 @@
 <script lang="ts">
-    import ChatField from "./Chat/ChatField.svelte";
-    import ChatInput from "./Chat/ChatInput.svelte";
+    import ChatField from "../Chat/ChatField.svelte";
+    import ChatInput from "../Chat/ChatInput.svelte";
   
 </script>
 

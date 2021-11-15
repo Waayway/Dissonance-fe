@@ -1,9 +1,8 @@
 <script lang="ts">
 import ChatDate from "./ChatDate.svelte";
 import ChatMessage from "./ChatMessage.svelte";
-import SveltePng from '../../../assets/svelte.png'
-
-    
+import SveltePng from '../../assets/svelte.png'
+  
 </script>
 
 <div class="h-full bg-primary-lighter">
