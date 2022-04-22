@@ -6,7 +6,7 @@ import ServerMainArea from './lib/ServerMainArea/MainArea.svelte';
   import './Tailwind.css'
   import {AreaType} from './stores';
 
-  let Area: String = "Server";
+  let Area: String = "Personal";
   AreaType.subscribe(value => {
     Area = value;
   })
@@ -17,7 +17,7 @@ import ServerMainArea from './lib/ServerMainArea/MainArea.svelte';
   <TextChannelSideBar />
   {#if Area == "Server"}
     <ServerMainArea />
-  {/if}
+  {/if} 
   {#if Area == "Personal"}
     <MainArea />
   {/if}

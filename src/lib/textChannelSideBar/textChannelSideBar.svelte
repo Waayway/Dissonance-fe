@@ -1,13 +1,22 @@
 <script lang="ts">
- import ArrowDown from 'svelte-icons/io/IoIosArrowDown.svelte'
- import CloseIcon from 'svelte-icons/io/IoMdClose.svelte'
-import Catagory from './Catagory.svelte'
-import TextChannel from './TextChannel.svelte'
- let MenuOpen = false
- 
- function toggleMenu() {
-    MenuOpen = !MenuOpen
- }
+    import ArrowDown from 'svelte-icons/io/IoIosArrowDown.svelte'
+    import CloseIcon from 'svelte-icons/io/IoMdClose.svelte'
+    import Catagory from './Catagory.svelte'
+    import TextChannel from './TextChannel.svelte'
+    // import {AreaType} from '../stores';
+    let MenuOpen = false
+    
+
+    
+    function toggleMenu() {
+        MenuOpen = !MenuOpen
+    }
+    
+
+    // let Area: String = "Personal";
+    // AreaType.subscribe(value => {
+    // Area = value;
+    // })
 </script>
 
 <div class="h-screen flex flex-col bg-primary-medium text-secondary-medium shadow-lg w-60">
