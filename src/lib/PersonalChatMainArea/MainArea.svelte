@@ -12,7 +12,7 @@
 
 <main class="h-screen bg-primary-lighter text-secondary-medium">
     <TopBar on:people={togglePeople} />
-    <div class="w-full grid main" class:people>
+    <div class="w-full main" class:people>
         <TextArea />
         {#if people}
             <People />
@@ -25,6 +25,7 @@
         height: calc(100vh - 57.6px);
     }
     .people {
+        display: grid;
         grid-template-columns: 80% 20%;
     }
 </style>

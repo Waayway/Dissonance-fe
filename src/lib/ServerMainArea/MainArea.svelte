@@ -1,7 +1,7 @@
 <script lang="ts">
     import People from "./People.svelte";
-import TextArea from "./TextArea.svelte";
-import TopBar from "./topBar.svelte";
+    import TextArea from "./TextArea.svelte";
+    import TopBar from "./topBar.svelte";
 </script>
 
 <main class="h-screen bg-primary-lighter text-secondary-medium">

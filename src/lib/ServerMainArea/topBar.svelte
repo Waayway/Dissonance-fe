@@ -1,7 +1,5 @@
 <script lang="ts">
-import FaHashtag from "svelte-icons/fa/FaHashtag.svelte";
-
-
+    import FaHashtag from "svelte-icons/fa/FaHashtag.svelte";
 </script>
 
 <div class="w-full border-b-2 border-primary-medium flex" style="height: 57.6px">
