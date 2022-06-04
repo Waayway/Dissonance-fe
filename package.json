@@ -1,5 +1,5 @@
 {
-  "name": "discordclone",
+  "name": "dissonance",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -22,6 +22,8 @@
     "vite": "^2.6.4"
   },
   "dependencies": {
+    "@sveltestack/svelte-query": "^1.6.0",
+    "broadcast-channel": "^4.13.0",
     "svelte-icons": "^2.1.0"
   }
 }

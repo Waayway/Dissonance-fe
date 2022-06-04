@@ -8,8 +8,8 @@
     }
 </script>
 
-<div class="h-auto grid grid-cols-3 text-left justify-start align-middle cursor-pointer hover:text-secondary-light main">
-    <div class="w-6 m-1 flex justify-center align-middle transition-all" class:closed on:click={toggleClosed}>
+<div class="h-auto grid grid-cols-3 text-left justify-start align-middle cursor-pointer hover:text-secondary-light main" on:click={toggleClosed}>
+    <div class="w-6 m-1 flex justify-center align-middle transition-all" class:closed>
         <ArrowDown />
     </div>
     <p class="my-2.5 mx-1 font-bold text-xs">

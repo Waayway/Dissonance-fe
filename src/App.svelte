@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { QueryClient, QueryClientProvider } from '@sveltestack/svelte-query'
     import MainArea from "./lib/PersonalChatMainArea/MainArea.svelte";
     import ServerMainArea from "./lib/ServerMainArea/MainArea.svelte";
     import Sidebar from "./lib/Sidebar/sidebar.svelte";
@@ -9,12 +10,14 @@
     import "./Tailwind.css";
     import { AreaType } from "./stores";
 
+    const queryClient = new QueryClient();
+
     let Area: String = "Login";
     AreaType.subscribe((value) => {
         Area = value;
     });
 </script>
-
+<QueryClientProvider client={queryClient}>
 {#if Area != "Login"}
     <main class="grid main {Area == 'Personal' ? 'personal' : ''}">
         <Sidebar />
@@ -41,3 +44,4 @@
         <Login />
     </main>
 {/if}
+</QueryClientProvider>
