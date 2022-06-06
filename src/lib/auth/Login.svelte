@@ -14,8 +14,7 @@
         }
     }
     function registerScreen() {
-        register("test@test.com",username,password)
-        AreaType.set("register")
+        AreaType.set("Register")
     }
 </script>
 

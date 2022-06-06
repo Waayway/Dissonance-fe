@@ -19,7 +19,7 @@ module.exports = {
           "light": "#14c889",
         },
         text: "#fff",
-        danger: '#e3342f',
+        danger: '#ef4444',
         gray: {
           900: '#202225',
           800: '#2f3136',

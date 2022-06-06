@@ -6,6 +6,7 @@
     import TextChannelSideBar from "./lib/textChannelSideBar/textChannelSideBar.svelte";
     import PersonalChatSideBar from "./lib/PersonalChatSideBar/PersonalChatSideBar.svelte";
     import Login from "./lib/auth/Login.svelte";
+    import Register from './lib/auth/Register.svelte';
     
     import "./Tailwind.css";
     import { AreaType } from "./stores";
@@ -18,7 +19,7 @@
     });
 </script>
 <QueryClientProvider client={queryClient}>
-{#if Area != "Login"}
+{#if Area != "Login" && Area != "Register"}
     <main class="grid main {Area == 'Personal' ? 'personal' : ''}">
         <Sidebar />
         {#if Area != "Personal"}
@@ -41,7 +42,11 @@
     </style>
 {:else}
     <main>
-        <Login />
+        {#if Area == "Login"}
+            <Login />
+        {:else if Area == "Register"}
+            <Register />
+        {/if}
     </main>
 {/if}
 </QueryClientProvider>
