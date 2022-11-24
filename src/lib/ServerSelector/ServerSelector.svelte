@@ -1,11 +1,13 @@
 <script lang="ts">
-    import SidebarButton from "./sidebarButton.svelte";
-    import SidebarSpacer from "./sidebarSpacer.svelte";
+    import SidebarButton from "./SelectorButton.svelte";
+    import SidebarSpacer from "./Spacer.svelte";
     import FaFire from 'svelte-icons/fa/FaFire.svelte';
     import { AreaType } from "../../stores";
+    import { get_user_data } from "../../api/auth";
 
     function switchToPersonal() {
         AreaType.set("Personal")
+        get_user_data();
     }
     function switchtoServer() {
         AreaType.set("Server")

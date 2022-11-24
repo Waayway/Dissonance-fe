@@ -1,1 +1,0 @@
-<div class="w-4 h-4 rounded-full border-4 border-primary-medium bg-secondary-light"><slot /></div>

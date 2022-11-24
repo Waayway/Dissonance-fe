@@ -5,6 +5,28 @@ const isAuthenticated = () => {
     return (token != null)
 }
 
+const get_user_data = async () => {
+    const header = new Headers({
+        "authorization": `Bearer ${localStorage.getItem('token')}`
+    })
+    const request = new Request(Address+"/users/me", {
+            headers: header,
+    })
+
+    let response = await fetch(request);
+    if (response.status === 500) {
+        throw new Error("internal server error");
+    }
+    const data = await response.json();
+    if (response.status > 400 && response.status < 500) {
+        if (data.detail) {
+            throw data.detail;
+        }
+        throw data
+    }
+    return data;
+}
+
 const login = async (username: string, password: string) => {
     if (!(username.length > 0) || !(password.length > 0)) {
         throw new Error("Username or password was not provided")
@@ -20,19 +42,19 @@ const login = async (username: string, password: string) => {
 
     let response = await fetch(request)
     if (response.status === 500) {
-        throw new Error("Internal server error")
+        throw new Error("Internal server error");
     }
     const data = await response.json()
     if (response.status > 400 && response.status < 500) {
         if (data.detail) {
             throw data.detail;
         }
-        throw data
+        throw data;
     }
     if ('access_token' in data) {
-        localStorage.setItem("token", data["access_token"])
+        localStorage.setItem("token", data["access_token"]);
     }
-    return data
+    return data;
 }
 
 const register = async (email: string, username: string, password: string) => {
@@ -66,8 +88,9 @@ const register = async (email: string, username: string, password: string) => {
     return data;
 }
 
+
 const logout = () => {
     localStorage.removeItem("token");
 };
 
-export { login, register }
+export { login, register, get_user_data }
